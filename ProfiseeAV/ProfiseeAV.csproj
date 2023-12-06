@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="NLog" Version="5.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Profisee.MasterDataMaestro.Common">
+      <HintPath>..\References\Profisee.MasterDataMaestro.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.MasterDataMaestro.Services.Contracts">
+      <HintPath>..\References\Profisee.MasterDataMaestro.Services.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Services.Sdk.AcceleratorFramework">
+      <HintPath>..\References\Profisee.Services.Sdk.AcceleratorFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Services.Sdk.Common.Contracts">
+      <HintPath>..\References\Profisee.Services.Sdk.Common.Contracts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

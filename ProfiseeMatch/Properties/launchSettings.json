@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProfiseeMatch": {
+      "commandName": "Project",
+      "commandLineArgs": "-s SCIOperations -c bd689f5455db486dad9a96fd1efe0f62 -u https://corpvmsql2022.corp.profisee.com/profisee23r2"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="7.0.0" />
+    <PackageReference Include="NLog" Version="5.2.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0-preview.7.23375.6" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0-rc.1.23419.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Profisee.MasterDataMaestro.Common">
+      <HintPath>..\References\Profisee.MasterDataMaestro.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.MasterDataMaestro.ServiceAdaptor">
+      <HintPath>..\References\Profisee.MasterDataMaestro.ServiceAdaptor.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.MasterDataMaestro.Services.Contracts">
+      <HintPath>..\References\Profisee.MasterDataMaestro.Services.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Platform.CoreData.Contracts">
+      <HintPath>..\References\Profisee.Platform.CoreData.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Platform.Workflow.Contracts">
+      <HintPath>..\References\Profisee.Platform.Workflow.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Services.Sdk.AcceleratorFramework">
+      <HintPath>..\References\Profisee.Services.Sdk.AcceleratorFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Services.Sdk.Common">
+      <HintPath>..\References\Profisee.Services.Sdk.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Services.Sdk.Common.Contracts">
+      <HintPath>..\References\Profisee.Services.Sdk.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Profisee.Services.Sdk.Helper">
+      <HintPath>..\References\Profisee.Services.Sdk.Helper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
